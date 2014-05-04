@@ -17,3 +17,8 @@
     padding: 6em; 
     height: 60em;
 }
+
+.instagram-placeholder {
+    float: left;
+    margin-right: 5px;
+}
