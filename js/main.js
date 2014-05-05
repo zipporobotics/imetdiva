@@ -32,6 +32,7 @@ jQuery(function($) {
 
     $('.instagram').instagram({
 	hash: 'love',
-	clientId: 'cbaf79de77bf45b7a2994d6b5ec0b3a7'
+	clientId: 'cbaf79de77bf45b7a2994d6b5ec0b3a7',
+	count: 40
     });
 });
