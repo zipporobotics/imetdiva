@@ -31,8 +31,8 @@ jQuery(function($) {
     $('.instagram').on('didLoadInstagram', displayPhotos);
 
     $('.instagram').instagram({
-	hash: 'love',
+	hash: 'selfie',
 	clientId: 'cbaf79de77bf45b7a2994d6b5ec0b3a7',
-	count: 40
+	count: 500
     });
 });
