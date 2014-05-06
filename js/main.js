@@ -33,6 +33,6 @@ jQuery(function($) {
     $('.instagram').instagram({
 	hash: 'selfie',
 	clientId: 'cbaf79de77bf45b7a2994d6b5ec0b3a7',
-	count: 500
+	count: 33
     });
 });
