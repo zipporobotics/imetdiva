@@ -1,3 +1,4 @@
+
 #header, #footer {
     position: fixed;
     width: 100%;
@@ -14,10 +15,22 @@
     bottom: 0; 
 }
 #main { 
-    padding: 4em; 
+    padding-top: 3em; 
 }
 
-.instagram-placeholder {
+.photo {
     float: left;
-    margin-right: 5px;
+    width: 100%;
+}
+
+.photo img {
+    width: 99.5%;
+}
+
+@media only screen and (min-device-width: 640px) {
+    .photo {
+	width: 20%;
+	height:12em;
+	overflow: hidden;
+    }
 }

@@ -1,6 +1,6 @@
 
-function createPhotoElement(photo) {
-    var innerHtml = $('<img>')
+function add_photo(url) {
+    return $('<img>')
         .addClass('instagram-image')
         .attr('src', photo.images.thumbnail.url);
 
@@ -15,24 +15,26 @@ function createPhotoElement(photo) {
         .append(innerHtml);
 }
 
-function displayPhotos(event, response) {
-    var that = this;
-    $(that).empty();
-    $.each(response.data, function(i, photo) {
-	$(that).append(createPhotoElement(photo));
-    });
+function display(data) {
+    $('#photos').empty();
+    for (var id in data) {
+	$('#photos').append(
+	    $('<div class="photo">')
+		.append(
+		    $('<img>')
+			.attr('src', data[id])
+		)
+	); 
+    }
 }
 
-jQuery(function($) {
-    $('.instagram').on('willLoadInstagram', function(event, options) {
-	console.log(options);
+$(document).ready(function() {
+
+    $.ajax({
+	url: "/photos.json",
+	success: function( data ) {
+	    display(data);
+	}
     });
 
-    $('.instagram').on('didLoadInstagram', displayPhotos);
-
-    $('.instagram').instagram({
-	hash: 'selfie',
-	clientId: 'cbaf79de77bf45b7a2994d6b5ec0b3a7',
-	count: 33
-    });
 });
