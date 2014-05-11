@@ -6,7 +6,7 @@ import secrets
 q = '#imetdiva'
 q = '#robot'
 
-json_file = 'photos.json'
+json_file = 'js/photos.json'
 json_data = open(json_file)
 photos = json.load(json_data)
 json_data.close()

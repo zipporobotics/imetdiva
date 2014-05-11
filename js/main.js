@@ -31,7 +31,7 @@ function display(data) {
 $(document).ready(function() {
 
     $.ajax({
-	url: "/photos.json",
+	url: "photos.json",
 	success: function( data ) {
 	    display(data);
 	}
