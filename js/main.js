@@ -31,7 +31,7 @@ function display(data) {
 $(document).ready(function() {
 
     $.ajax({
-	url: "photos.json",
+	url: "http://zipporobotics.github.io/imetdiva/photos.json",
 	success: function( data ) {
 	    display(data);
 	}

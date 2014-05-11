@@ -4,9 +4,9 @@ import json
 import secrets
 
 q = '#imetdiva'
-q = '#robot'
+#q = '#robot'
 
-json_file = 'js/photos.json'
+json_file = 'photos.json'
 json_data = open(json_file)
 photos = json.load(json_data)
 json_data.close()
