@@ -4,7 +4,7 @@ import json
 import secrets
 
 q = '#imetdiva'
-#q = '#robot'
+q = '#love'
 
 json_file = 'photos.json'
 json_data = open(json_file)
@@ -16,7 +16,7 @@ auth.set_access_token(secrets.access_token, secrets.access_token_secret)
 
 api = tweepy.API(auth)
 
-tweets = api.search(q=q)
+tweets = api.search(q=q, count=100)
 for tweet in tweets:
 	id = tweet.id_str
 	try:
