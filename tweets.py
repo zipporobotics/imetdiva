@@ -4,7 +4,7 @@ import json
 import secrets
 
 q = '#imetdiva'
-q = '#love'
+q = '#selfie'
 
 json_file = 'photos.json'
 json_data = open(json_file)
@@ -20,8 +20,9 @@ tweets = api.search(q=q, count=100)
 for tweet in tweets:
 	id = tweet.id_str
 	try:
-		url = tweet.entities['media'][0]['media_url']
-		photos[id] = url
+		media_url = tweet.entities['media'][0]['media_url']
+		url = tweet.entities['media'][0]['url']
+		photos[url] = media_url
 		print 'updated ' + id
 	except:
 		print 'ignoring '+ id
